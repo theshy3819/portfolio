@@ -1,0 +1,443 @@
+/* ---------- 토큰 (Figma: DDESIGN — Interactive Portfolio Site) ---------- */
+
+:root {
+  --paper: #f4f3ef;
+  --paper-sunk: #eae8e2;
+  --ink: #111110;
+  --viewer: #2a2926; /* 화면에서 쪽 둘레 바탕 */
+  --ink-muted: #6b6862;
+  --line: #d9d6ce;
+  --line-dark: #2e2d2a;
+  --on-dark: #f4f3ef;
+  --on-dark-muted: #8f8c85;
+  --accent: #1f2cff;
+  /* 어두운 바탕 위 작은 글자용: #1f2cff는 #111110 위에서 2.6:1이라 같은 계열을 밝힘 (5.9:1) */
+  --accent-on-dark: #7c84ff;
+
+  --f-display: 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif;
+  --f-kr: 'Noto Sans KR Variable', 'Archivo Variable', system-ui, sans-serif;
+  --f-mono: 'Geist Mono Variable', 'Noto Sans KR Variable', ui-monospace, monospace;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light;
+  font-family: var(--f-kr);
+  color: var(--ink);
+  background: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink-muted) var(--paper);
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+dl,
+dd,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+}
+
+/* 쪽 색 문맥: 밝은 면 / 가라앉은 면 / 어두운 면 */
+.light,
+.sunk {
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --fg-muted: var(--ink-muted);
+  --rule: var(--line);
+  --acc: var(--accent);
+  --chip-bg: var(--paper-sunk);
+}
+
+.sunk {
+  --bg: var(--paper-sunk);
+  --chip-bg: var(--paper);
+}
+
+.dark {
+  --bg: var(--ink);
+  --fg: var(--on-dark);
+  --fg-muted: var(--on-dark-muted);
+  --rule: var(--line-dark);
+  --acc: var(--accent-on-dark);
+  --chip-bg: #1d1c1a;
+}
+
+.light,
+.sunk,
+.dark {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.muted {
+  color: var(--fg-muted);
+}
+
+.acc {
+  color: var(--acc);
+}
+
+/* ---------- 글자 (Figma 텍스트 스타일) ---------- */
+
+.mono-label {
+  font-family: var(--f-mono);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mono-num {
+  font-family: var(--f-mono);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.mono-meta {
+  font-family: var(--f-mono);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.wordmark {
+  font-family: var(--f-display);
+  font-weight: 900;
+  line-height: 0.84;
+  letter-spacing: -0.045em;
+}
+
+.display-xl {
+  font-family: var(--f-display);
+  font-size: 104px;
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+}
+
+.display-lg {
+  font-family: var(--f-display);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.heading-md {
+  font-family: var(--f-display);
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.page-title {
+  font-family: var(--f-display);
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.kr-lead {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  color: var(--fg-muted);
+}
+
+.kr-body {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--rule);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--chip-bg);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.blank {
+  display: inline-block;
+  width: 9em;
+  border-bottom: 1px dashed var(--fg-muted);
+}
+
+/* ---------- 버튼 (Figma: Button) ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--on-dark);
+  font-family: var(--f-mono);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color 0.3s var(--ease-out),
+    color 0.3s var(--ease-out);
+}
+
+.btn > span {
+  transition: transform 0.4s var(--ease-out);
+}
+
+.btn:hover > span {
+  transform: translateX(4px);
+}
+
+.btn-accent {
+  background: var(--accent);
+}
+
+.btn-accent:hover {
+  background: var(--on-dark);
+  color: var(--ink);
+}
+
+/* ---------- 쪽 (A4 가로) ---------- */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding: 56px 96px 44px;
+}
+
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.page-head .kicker {
+  display: flex;
+  gap: 12px;
+}
+
+.page-body {
+  flex: 1;
+  min-height: 0;
+}
+
+.page-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+/* 좁은 화면: 쪽은 내용 길이만큼, 위아래로 이어짐 */
+@media screen and (max-width: 899px) {
+  .page {
+    gap: 28px;
+    padding: 36px 20px 32px;
+  }
+
+  .display-xl {
+    font-size: clamp(44px, 12vw, 72px);
+  }
+
+  .display-lg {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .heading-md {
+    font-size: clamp(24px, 6.6vw, 32px);
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
+
+  .kr-lead {
+    font-size: 17px;
+  }
+}
+
+/* ---------- A4 캔버스: 넓은 화면과 인쇄 ----------
+   쪽 하나 = 1440×1018 (297:210). 이 크기 그대로 배치하고 zoom으로 화면 폭(--scale) 또는 297mm에 맞춤. */
+
+@media screen and (min-width: 900px), print {
+  .page {
+    width: 1440px;
+    height: 1018px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+
+  /* 쪽을 넘겨 보는 뷰어: 어두운 바탕 위에 한 장씩, 창 가운데 */
+  body {
+    background: var(--viewer);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap, 24px);
+    padding: var(--gap, 24px) 0;
+  }
+
+  .page {
+    zoom: var(--scale, 1);
+    scroll-snap-align: center;
+    box-shadow: 0 18px 50px rgb(0 0 0 / 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- 인쇄: 쪽 하나 = A4 가로 한 장, 어두운 쪽은 밝은 면으로 ---------- */
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    background: #fff;
+  }
+
+  main {
+    display: block;
+    padding: 0;
+  }
+
+  /* 297mm = 1122.52px → 1122.52 / 1440 */
+  .page {
+    box-shadow: none;
+    zoom: 0.7795;
+    break-after: page;
+    break-inside: avoid;
+  }
+
+  .page:last-of-type {
+    break-after: auto;
+  }
+
+  .light,
+  .sunk,
+  .dark {
+    --bg: #fff;
+    --fg: var(--ink);
+    --fg-muted: var(--ink-muted);
+    --rule: var(--line);
+    --acc: var(--accent);
+    --chip-bg: #fff;
+  }
+
+  .sunk {
+    --bg: #f7f6f3;
+  }
+
+  .btn {
+    display: none;
+  }
+}

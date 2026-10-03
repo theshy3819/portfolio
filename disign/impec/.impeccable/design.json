@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-02T03:07:27.529Z",
+  "title": "Design System: 송호영 포트폴리오",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "oklch(48.3% 0.2921 266.7)",
+        "tonalRamp": [
+          "oklch(15% 0.2921 266.7)",
+          "oklch(26% 0.2921 266.7)",
+          "oklch(37% 0.2921 266.7)",
+          "oklch(48% 0.2921 266.7)",
+          "oklch(60% 0.2921 266.7)",
+          "oklch(72% 0.2921 266.7)",
+          "oklch(84% 0.2921 266.7)",
+          "oklch(95% 0.2921 266.7)"
+        ]
+      },
+      "accent-on-dark": {
+        "role": "primary",
+        "displayName": "Lifted Blue",
+        "canonical": "oklch(66.6% 0.1793 277.5)",
+        "tonalRamp": [
+          "oklch(15% 0.1793 277.5)",
+          "oklch(26% 0.1793 277.5)",
+          "oklch(37% 0.1793 277.5)",
+          "oklch(48% 0.1793 277.5)",
+          "oklch(60% 0.1793 277.5)",
+          "oklch(72% 0.1793 277.5)",
+          "oklch(84% 0.1793 277.5)",
+          "oklch(95% 0.1793 277.5)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "oklch(96.4% 0.0054 95.1)",
+        "tonalRamp": [
+          "oklch(15% 0.0054 95.1)",
+          "oklch(26% 0.0054 95.1)",
+          "oklch(37% 0.0054 95.1)",
+          "oklch(48% 0.0054 95.1)",
+          "oklch(60% 0.0054 95.1)",
+          "oklch(72% 0.0054 95.1)",
+          "oklch(84% 0.0054 95.1)",
+          "oklch(95% 0.0054 95.1)"
+        ]
+      },
+      "paper-sunk": {
+        "role": "neutral",
+        "displayName": "Sunk Paper",
+        "canonical": "oklch(93.1% 0.0083 91.5)",
+        "tonalRamp": [
+          "oklch(15% 0.0083 91.5)",
+          "oklch(26% 0.0083 91.5)",
+          "oklch(37% 0.0083 91.5)",
+          "oklch(48% 0.0083 91.5)",
+          "oklch(60% 0.0083 91.5)",
+          "oklch(72% 0.0083 91.5)",
+          "oklch(84% 0.0083 91.5)",
+          "oklch(95% 0.0083 91.5)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Press Ink",
+        "canonical": "oklch(17.7% 0.0020 106.6)",
+        "tonalRamp": [
+          "oklch(15% 0.0020 106.6)",
+          "oklch(26% 0.0020 106.6)",
+          "oklch(37% 0.0020 106.6)",
+          "oklch(48% 0.0020 106.6)",
+          "oklch(60% 0.0020 106.6)",
+          "oklch(72% 0.0020 106.6)",
+          "oklch(84% 0.0020 106.6)",
+          "oklch(95% 0.0020 106.6)"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(51.8% 0.0100 84.6)",
+        "tonalRamp": [
+          "oklch(15% 0.0100 84.6)",
+          "oklch(26% 0.0100 84.6)",
+          "oklch(37% 0.0100 84.6)",
+          "oklch(48% 0.0100 84.6)",
+          "oklch(60% 0.0100 84.6)",
+          "oklch(72% 0.0100 84.6)",
+          "oklch(84% 0.0100 84.6)",
+          "oklch(95% 0.0100 84.6)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(87.6% 0.0113 89.7)",
+        "tonalRamp": [
+          "oklch(15% 0.0113 89.7)",
+          "oklch(26% 0.0113 89.7)",
+          "oklch(37% 0.0113 89.7)",
+          "oklch(48% 0.0113 89.7)",
+          "oklch(60% 0.0113 89.7)",
+          "oklch(72% 0.0113 89.7)",
+          "oklch(84% 0.0113 89.7)",
+          "oklch(95% 0.0113 89.7)"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Dark Hairline",
+        "canonical": "oklch(29.7% 0.0055 91.6)",
+        "tonalRamp": [
+          "oklch(15% 0.0055 91.6)",
+          "oklch(26% 0.0055 91.6)",
+          "oklch(37% 0.0055 91.6)",
+          "oklch(48% 0.0055 91.6)",
+          "oklch(60% 0.0055 91.6)",
+          "oklch(72% 0.0055 91.6)",
+          "oklch(84% 0.0055 91.6)",
+          "oklch(95% 0.0055 91.6)"
+        ]
+      },
+      "on-dark": {
+        "role": "neutral",
+        "displayName": "Warm Paper (on dark)",
+        "canonical": "oklch(96.4% 0.0054 95.1)",
+        "tonalRamp": [
+          "oklch(15% 0.0054 95.1)",
+          "oklch(26% 0.0054 95.1)",
+          "oklch(37% 0.0054 95.1)",
+          "oklch(48% 0.0054 95.1)",
+          "oklch(60% 0.0054 95.1)",
+          "oklch(72% 0.0054 95.1)",
+          "oklch(84% 0.0054 95.1)",
+          "oklch(95% 0.0054 95.1)"
+        ]
+      },
+      "on-dark-muted": {
+        "role": "neutral",
+        "displayName": "Ash",
+        "canonical": "oklch(64.1% 0.0109 87.5)",
+        "tonalRamp": [
+          "oklch(15% 0.0109 87.5)",
+          "oklch(26% 0.0109 87.5)",
+          "oklch(37% 0.0109 87.5)",
+          "oklch(48% 0.0109 87.5)",
+          "oklch(60% 0.0109 87.5)",
+          "oklch(72% 0.0109 87.5)",
+          "oklch(84% 0.0109 87.5)",
+          "oklch(95% 0.0109 87.5)"
+        ]
+      },
+      "print-paper": {
+        "role": "neutral",
+        "displayName": "Print White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "print-sunk": {
+        "role": "neutral",
+        "displayName": "Print Sunk",
+        "canonical": "oklch(97.3% 0.0041 91.4)",
+        "tonalRamp": [
+          "oklch(15% 0.0041 91.4)",
+          "oklch(26% 0.0041 91.4)",
+          "oklch(37% 0.0041 91.4)",
+          "oklch(48% 0.0041 91.4)",
+          "oklch(60% 0.0041 91.4)",
+          "oklch(72% 0.0041 91.4)",
+          "oklch(84% 0.0041 91.4)",
+          "oklch(95% 0.0041 91.4)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "표지 \"포트폴리오\" 한 번만.",
+        "fluid": "clamp(64px, 17vw, 140px)"
+      },
+      "display-xl": {
+        "displayName": "Display XL",
+        "purpose": "연락처 쪽 마무리 문장.",
+        "fluid": "clamp(44px, 12vw, 72px)"
+      },
+      "display-lg": {
+        "displayName": "Display LG",
+        "purpose": "목차, 스킬처럼 혼자 서는 섹션 쪽의 제목.",
+        "fluid": "clamp(36px, 10vw, 52px)"
+      },
+      "heading-md": {
+        "displayName": "Heading MD",
+        "purpose": "표지 캐치프레이즈, 프로필 소개 제목. text-wrap: balance.",
+        "fluid": "clamp(24px, 6.6vw, 32px)"
+      },
+      "page-title": {
+        "displayName": "Page Title",
+        "purpose": "프로젝트 2~4쪽의 쪽 제목.",
+        "fluid": "26px"
+      },
+      "kr-lead": {
+        "displayName": "Lead",
+        "purpose": "섹션 제목 아래 한 줄 설명, 보조 글자색.",
+        "fluid": "17px"
+      },
+      "kr-body": {
+        "displayName": "Body",
+        "purpose": "긴 문장. 프로젝트 쪽의 촘촘한 문장은 13~15.5px / 1.5~1.65. text-wrap: pretty."
+      },
+      "mono-label": {
+        "displayName": "Label",
+        "purpose": "머리줄·발줄, 블록 제목, 표 머리, 정의 목록 이름 칸. 대문자."
+      },
+      "mono-num": {
+        "displayName": "Numeral",
+        "purpose": "목록 번호 01·02·03, 쪽 범위. tabular-nums."
+      },
+      "mono-meta": {
+        "displayName": "Meta",
+        "purpose": "날짜, 기간, 출처 메모, 캡션."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "모든 상태 전환의 이징(--ease-out)."
+      },
+      {
+        "name": "color-shift",
+        "value": "0.3s",
+        "purpose": "버튼 바탕·글자색, 목차 행 이름의 hover 색 전환."
+      },
+      {
+        "name": "arrow-nudge",
+        "value": "transform 0.4s, translateX(4px)",
+        "purpose": "버튼 끝 방향 표시가 hover에서 4px 밀림."
+      },
+      {
+        "name": "page-scroll",
+        "value": "scroll-behavior: smooth; scroll-snap-type: y proximity (≥900px)",
+        "purpose": "앵커 이동은 부드럽게, 넓은 화면은 쪽 머리에 가볍게 붙음."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition-duration: 0.01ms; scroll-behavior: auto",
+        "purpose": "prefers-reduced-motion에서 모든 전환과 부드러운 스크롤을 끔."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "479px",
+        "purpose": "이하에서 머리줄 보조 표기(표지 날짜) 숨김."
+      },
+      {
+        "name": "fluid",
+        "value": "899px",
+        "purpose": "이하(screen)에서 캔버스 해제, 한 단 문서, 구조도는 담당별 목록."
+      },
+      {
+        "name": "canvas",
+        "value": "900px",
+        "purpose": "이상에서 1440×1018 캔버스, zoom = 화면 폭 ÷ 1440."
+      },
+      {
+        "name": "print",
+        "value": "print",
+        "purpose": "A4 가로, margin 0, zoom 0.7795, 쪽당 한 장, 모든 면을 흰 종이로."
+      }
+    ],
+    "canvas": {
+      "width": "1440px",
+      "height": "1018px",
+      "ratio": "297:210 (A4 landscape)",
+      "screenZoom": "var(--scale) = documentElement.clientWidth / 1440 (main.js, resize마다 갱신)",
+      "printZoom": "0.7795 (297mm = 1122.52px / 1440)",
+      "overflow": "hidden (≥900px, print)",
+      "fluidBelow": "900px"
+    },
+    "faces": {
+      "light": {
+        "--bg": "paper",
+        "--fg": "ink",
+        "--fg-muted": "ink-muted",
+        "--rule": "line",
+        "--acc": "accent",
+        "--chip-bg": "paper-sunk"
+      },
+      "sunk": {
+        "--bg": "paper-sunk",
+        "--fg": "ink",
+        "--fg-muted": "ink-muted",
+        "--rule": "line",
+        "--acc": "accent",
+        "--chip-bg": "paper"
+      },
+      "dark": {
+        "--bg": "ink",
+        "--fg": "on-dark",
+        "--fg-muted": "on-dark-muted",
+        "--rule": "line-dark",
+        "--acc": "accent-on-dark",
+        "--chip-bg": "#1d1c1a"
+      },
+      "print": {
+        "--bg": "print-paper (sunk: print-sunk)",
+        "--fg": "ink",
+        "--fg-muted": "ink-muted",
+        "--rule": "line",
+        "--acc": "accent",
+        "--chip-bg": "print-paper"
+      }
+    },
+    "tints": [
+      {
+        "name": "mine-fill",
+        "value": "color-mix(in srgb, var(--acc) 10%, var(--bg))",
+        "purpose": "본인 담당 구조도 노드 바탕."
+      },
+      {
+        "name": "mine-swatch",
+        "value": "color-mix(in srgb, var(--acc) 15%, transparent)",
+        "purpose": "구조도 범례의 본인 견본."
+      },
+      {
+        "name": "bar-track",
+        "value": "color-mix(in srgb, var(--rule) 55%, transparent)",
+        "purpose": "전/후 막대 트랙."
+      },
+      {
+        "name": "team-fill",
+        "value": "color-mix(in srgb, var(--rule) 25%, transparent)",
+        "purpose": "팀원 분담 칸 바탕."
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid var(--acc); outline-offset: 4px; border-radius: 2px",
+      "purpose": "모든 :focus-visible."
+    }
+  },
+  "components": [
+    {
+      "name": "Accent Button",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "연락처 쪽의 유일한 CTA. 잉크 면 위 Signal Blue 알약, hover에서 종이색으로 뒤집히고 끝 화살표가 4px 밀린다. 인쇄에서는 숨긴다.",
+      "html": "<div class=\"ds-dark-face\"><a class=\"ds-btn ds-btn-accent\" href=\"#\">Send an email <svg class=\"ds-btn-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a></div>",
+      "css": ".ds-dark-face { background: var(--ink, #111110); padding: 32px; } .ds-btn { display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; border-radius: 999px; background: var(--ink, #111110); color: var(--on-dark, #f4f3ef); font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12px; font-weight: 500; line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; text-decoration: none; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-accent { background: var(--accent, #1f2cff); } .ds-btn-accent:hover { background: var(--on-dark, #f4f3ef); color: var(--ink, #111110); } .ds-btn-arrow { width: 1em; height: 1em; flex: none; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover .ds-btn-arrow { transform: translateX(4px); } .ds-btn:focus-visible { outline: 2px solid var(--accent-on-dark, #7c84ff); outline-offset: 4px; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "기술 이름 태그. 알약, 1px Hairline, 면에 따라 바탕이 바뀐다. 핵심 구현 목록에서는 11px 조밀형.",
+      "html": "<p class=\"ds-chips\"><span class=\"ds-chip\">Three.js</span><span class=\"ds-chip\">React Three Fiber</span><span class=\"ds-chip ds-chip-dense\">InstancedMesh</span><span class=\"ds-chip ds-chip-dense\">GLSL</span></p>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 20px; background: var(--paper, #f4f3ef); } .ds-chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--line, #d9d6ce); border-radius: 999px; background: var(--paper-sunk, #eae8e2); color: var(--ink, #111110); font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12px; line-height: 1.4; } .ds-chip-dense { padding: 2px 8px; font-size: 11px; }"
+    },
+    {
+      "name": "Page Frame",
+      "kind": "nav",
+      "refersTo": "page",
+      "description": "A4 가로 쪽의 틀. 머리줄(섹션 번호 · 이름 · 쪽수)과 프로젝트 쪽 발줄. 머리줄은 제목 위 아이브로가 아니라 인쇄 문서의 머리글이다.",
+      "html": "<section class=\"ds-page\"><header class=\"ds-page-head\"><p class=\"ds-page-kick\"><span class=\"ds-acc\">(04)</span><span class=\"ds-muted\">Project — COSMOS</span></p><p class=\"ds-muted\">06 / 16</p></header><div class=\"ds-page-body\"><h2 class=\"ds-page-title\">사용 기술 · 적용 맥락과 선택 이유</h2></div><footer class=\"ds-page-foot\"><span>COSMOS</span><span>사용 기술 · 구현 사항</span></footer></section>",
+      "css": ".ds-page { display: flex; flex-direction: column; gap: 36px; aspect-ratio: 1440 / 1018; max-width: 720px; padding: 28px 48px 22px; background: var(--paper, #f4f3ef); color: var(--ink, #111110); } .ds-page-head, .ds-page-foot { display: flex; justify-content: space-between; gap: 24px; font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12px; font-weight: 500; line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase; } .ds-page-head p { margin: 0; } .ds-page-kick { display: flex; gap: 12px; } .ds-acc { color: var(--accent, #1f2cff); } .ds-muted { color: var(--ink-muted, #6b6862); } .ds-page-body { flex: 1; } .ds-page-title { margin: 0; font-family: var(--f-display, 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 34px; font-weight: 600; line-height: 1.1; letter-spacing: -0.025em; } .ds-page-foot { padding-top: 14px; border-top: 1px solid var(--line, #d9d6ce); color: var(--ink-muted, #6b6862); }"
+    },
+    {
+      "name": "Tech Pick Card",
+      "kind": "card",
+      "refersTo": "pick-card",
+      "description": "\"왜 이 기술을 골랐나\" 쪽의 카드. 기술 이름, 고른 이유 한두 줄, Hairline 아래 대가 한 줄. 3열로 놓이고 아래에 구조도가 온다.",
+      "html": "<article class=\"ds-pick\"><p class=\"ds-pick-head\"><span class=\"ds-pick-num\">01</span><strong>TanStack Query</strong></p><p class=\"ds-pick-why\">비율 슬라이더를 움직여도 재요청 없이 select에서 점수만 다시 계산</p><p class=\"ds-pick-cost\"><span>대가</span>점수 혼합 공식이 FE에도 있어 서버 변경 시 함께 수정</p></article>",
+      "css": ".ds-pick { max-width: 400px; padding: 20px 22px; border: 1px solid var(--line, #d9d6ce); border-radius: 12px; background: var(--paper, #f4f3ef); color: var(--ink, #111110); font-family: var(--f-kr, 'Noto Sans KR Variable', system-ui, sans-serif); word-break: keep-all; } .ds-pick-head { display: flex; align-items: baseline; gap: 10px; margin: 0 0 12px; } .ds-pick-num { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 15px; font-weight: 500; color: var(--accent, #1f2cff); } .ds-pick-head strong { font-family: var(--f-display, 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 19px; font-weight: 600; } .ds-pick-why { margin: 0 0 14px; font-size: 15.5px; line-height: 1.55; font-weight: 500; } .ds-pick-cost { display: grid; grid-template-columns: 38px 1fr; margin: 0; padding-top: 12px; border-top: 1px solid var(--line, #d9d6ce); font-size: 14px; line-height: 1.5; color: var(--ink-muted, #6b6862); } .ds-pick-cost span { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 11px; padding-top: 2px; }"
+    },
+    {
+      "name": "Problem Flow",
+      "kind": "list",
+      "refersTo": "page",
+      "description": "문제 → 원인 → 해결 → 결과를 위에서 아래로 한 줄씩. 원 번호를 2px 세로선이 잇고, 아래 절반(해결·결과)은 파랑. 결과 문장은 22px 700.",
+      "html": "<ol class=\"ds-flow\"><li><span class=\"ds-no\">01</span><span class=\"ds-lb\">문제</span><p>첫 화면 JS 292KB, 렌더 차단 410ms — Lighthouse 지적</p></li><li><span class=\"ds-no\">02</span><span class=\"ds-lb\">원인</span><p>모든 라우트와 three.js가 첫 번들에 포함</p></li><li class=\"ds-sol\"><span class=\"ds-no\">03</span><span class=\"ds-lb\">해결</span><p>라우트·3D Scene 지연 로딩 + 청크 선로딩</p></li><li class=\"ds-res\"><span class=\"ds-no\">04</span><span class=\"ds-lb\">결과</span><p>첫 로드 JS 절반 가까이 감소, LCP 1.8 → 1.1s</p></li></ol>",
+      "css": ".ds-flow { position: relative; max-width: 820px; margin: 0; padding: 0; list-style: none; color: var(--ink, #111110); font-family: var(--f-kr, 'Noto Sans KR Variable', system-ui, sans-serif); word-break: keep-all; } .ds-flow::before { content: ''; position: absolute; left: 17px; top: 12.5%; bottom: 12.5%; width: 2px; background: linear-gradient(var(--line, #d9d6ce) 0 50%, var(--accent, #1f2cff) 50% 100%); } .ds-flow li { position: relative; display: grid; grid-template-columns: 36px 64px 1fr; gap: 0 18px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line, #d9d6ce); } .ds-flow li:last-child { border-bottom: 0; } .ds-no { position: relative; z-index: 1; display: grid; place-items: center; width: 36px; height: 36px; border: 2px solid var(--line, #d9d6ce); border-radius: 50%; background: var(--paper, #f4f3ef); font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12px; color: var(--ink-muted, #6b6862); } .ds-lb { font-size: 16px; font-weight: 600; color: var(--ink-muted, #6b6862); } .ds-flow p { margin: 0; font-size: 19px; line-height: 1.55; } .ds-sol .ds-no, .ds-res .ds-no { border-color: var(--accent, #1f2cff); color: var(--accent, #1f2cff); } .ds-res .ds-no { background: var(--accent, #1f2cff); color: var(--paper, #f4f3ef); } .ds-sol .ds-lb, .ds-res .ds-lb { color: var(--accent, #1f2cff); } .ds-res p { font-size: 22px; font-weight: 700; }"
+    },
+    {
+      "name": "Before/After Metric Bars",
+      "kind": "custom",
+      "refersTo": "metric-panel",
+      "description": "Sunk Paper 패널. 지표마다 변화 폭(파랑 큰 수치)과 전(Graphite)·후(Signal Blue) 막대, 길이는 최댓값 기준, 아래에 출처 메모.",
+      "html": "<aside class=\"ds-metrics\"><p class=\"ds-m-cap\">Before → After</p><div class=\"ds-metric\"><p class=\"ds-m-head\"><span class=\"ds-m-label\">첫 로드 JS</span><span class=\"ds-m-change\">−48.6%</span></p><p class=\"ds-m-row\"><span class=\"ds-m-tag\">전</span><span class=\"ds-m-bar\"><span class=\"ds-m-fill\" style=\"width:100%\"></span></span><span class=\"ds-m-val\">292KB</span></p><p class=\"ds-m-row\"><span class=\"ds-m-tag ds-acc\">후</span><span class=\"ds-m-bar\"><span class=\"ds-m-fill ds-after\" style=\"width:51.4%\"></span></span><span class=\"ds-m-val ds-strong\">150KB</span></p></div><p class=\"ds-m-src\">Lighthouse 지적 항목 · 커밋 53ca8dd 기재값</p></aside>",
+      "css": ".ds-metrics { display: grid; gap: 14px; max-width: 360px; padding: 18px 20px; border-radius: 10px; background: var(--paper-sunk, #eae8e2); color: var(--ink, #111110); } .ds-metrics p { margin: 0; } .ds-m-cap { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12px; font-weight: 500; line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted, #6b6862); } .ds-m-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px !important; } .ds-m-label { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted, #6b6862); } .ds-m-change { font-family: var(--f-display, 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 30px; font-weight: 600; line-height: 1; letter-spacing: -0.02em; color: var(--accent, #1f2cff); font-variant-numeric: tabular-nums; } .ds-metric { display: grid; gap: 5px; } .ds-m-row { display: grid; grid-template-columns: 18px 1fr 92px; align-items: center; gap: 10px; } .ds-m-tag { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12.5px; color: var(--ink-muted, #6b6862); } .ds-acc { color: var(--accent, #1f2cff); } .ds-m-bar { position: relative; height: 10px; border-radius: 1px; background: color-mix(in srgb, var(--line, #d9d6ce) 55%, transparent); } .ds-m-fill { display: block; height: 100%; border-radius: 1px; background: var(--ink-muted, #6b6862); } .ds-after { background: var(--accent, #1f2cff); } .ds-m-val { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 13px; text-align: right; color: var(--ink-muted, #6b6862); font-variant-numeric: tabular-nums; } .ds-strong { color: var(--ink, #111110); font-weight: 600; } .ds-m-src { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12.5px; line-height: 1.4; letter-spacing: 0.02em; color: var(--ink-muted, #6b6862); }"
+    },
+    {
+      "name": "Architecture Diagram Owners",
+      "kind": "custom",
+      "refersTo": "arch-node-mine",
+      "description": "구조도 노드의 담당 코드. 본인 = 파랑 10% 틴트와 1.6px 파랑 테두리, 팀원 = 1.2px Hairline, 외부 = 4 3 점선. 간선 라벨은 면 색 테두리로 선 위에서 읽힌다.",
+      "html": "<figure class=\"ds-arch\"><svg viewBox=\"-4 -10 540 92\" role=\"img\" aria-label=\"구조도 담당 견본\"><defs><marker id=\"ds-arrow\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0 0L10 5L0 10z\" fill=\"currentColor\"/></marker></defs><line x1=\"150\" y1=\"30\" x2=\"190\" y2=\"30\" marker-end=\"url(#ds-arrow)\"/><line x1=\"340\" y1=\"30\" x2=\"380\" y2=\"30\" marker-end=\"url(#ds-arrow)\"/><g class=\"ds-node ds-ext\"><rect x=\"0\" y=\"0\" width=\"150\" height=\"60\" rx=\"6\"/><text x=\"12\" y=\"25\" class=\"ds-nl\">PostgreSQL 17</text><text x=\"12\" y=\"45\" class=\"ds-ns\">PUBLISHED 스냅샷</text></g><g class=\"ds-node ds-team\"><rect x=\"190\" y=\"0\" width=\"150\" height=\"60\" rx=\"6\"/><text x=\"202\" y=\"25\" class=\"ds-nl\">Spring Boot REST</text><text x=\"202\" y=\"45\" class=\"ds-ns\">스냅샷 조회 API</text></g><g class=\"ds-node ds-mine\"><rect x=\"380\" y=\"0\" width=\"150\" height=\"60\" rx=\"6\"/><text x=\"392\" y=\"25\" class=\"ds-nl\">TanStack Query</text><text x=\"392\" y=\"45\" class=\"ds-ns\">sessionKey·재가중</text></g><text x=\"345\" y=\"80\" class=\"ds-el\">gzip JSON</text></svg><figcaption class=\"ds-legend\"><span><i class=\"ds-sw ds-sw-mine\"></i>본인 담당</span><span><i class=\"ds-sw\"></i>팀원 담당</span><span><i class=\"ds-sw ds-sw-ext\"></i>외부</span></figcaption></figure>",
+      "css": ".ds-arch { display: grid; gap: 12px; margin: 0; padding: 20px; background: var(--paper, #f4f3ef); color: var(--ink-muted, #6b6862); } .ds-arch svg { display: block; width: 100%; height: auto; overflow: visible; } .ds-arch line { stroke: currentColor; stroke-width: 1.4; } .ds-node rect { fill: var(--paper, #f4f3ef); stroke: var(--line, #d9d6ce); stroke-width: 1.2; } .ds-mine rect { fill: color-mix(in srgb, var(--accent, #1f2cff) 10%, var(--paper, #f4f3ef)); stroke: var(--accent, #1f2cff); stroke-width: 1.6; } .ds-ext rect { stroke-dasharray: 4 3; } .ds-nl { font-family: var(--f-display, 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 16px; font-weight: 600; fill: var(--ink, #111110); } .ds-mine .ds-nl { fill: var(--accent, #1f2cff); } .ds-ns { font-family: var(--f-kr, 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 13.5px; fill: var(--ink-muted, #6b6862); } .ds-el { font-family: var(--f-kr, 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 13.5px; fill: var(--ink-muted, #6b6862); paint-order: stroke; stroke: var(--paper, #f4f3ef); stroke-width: 5px; stroke-linejoin: round; } .ds-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.02em; } .ds-legend span { display: inline-flex; align-items: center; gap: 6px; } .ds-sw { width: 14px; height: 10px; border: 1.2px solid var(--line, #d9d6ce); border-radius: 2px; } .ds-sw-mine { border-color: var(--accent, #1f2cff); background: color-mix(in srgb, var(--accent, #1f2cff) 15%, transparent); } .ds-sw-ext { border-style: dashed; }"
+    },
+    {
+      "name": "Level Bar",
+      "kind": "custom",
+      "refersTo": "level-segment-on",
+      "description": "5단계 숙련도(기초·초급·중급·고급·전문가). 12×6 칸 다섯 개, 켜진 칸은 파랑, 오른쪽에 단계 이름.",
+      "html": "<p class=\"ds-skill\"><span class=\"ds-skill-name\">Vue.js</span><span class=\"ds-level\" role=\"img\" aria-label=\"숙련도 고급 (5단계 중 4)\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i></i><span>고급</span></span></p>",
+      "css": ".ds-skill { display: flex; align-items: center; justify-content: space-between; gap: 8px; max-width: 300px; margin: 0; padding: 10px 0 11px; border-bottom: 1px solid var(--line, #d9d6ce); background: var(--paper, #f4f3ef); color: var(--ink, #111110); } .ds-skill-name { font-family: var(--f-display, 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 16px; font-weight: 600; } .ds-level { display: inline-flex; align-items: center; gap: 3px; } .ds-level i { width: 12px; height: 6px; border-radius: 1px; background: var(--line, #d9d6ce); } .ds-level i.on { background: var(--accent, #1f2cff); } .ds-level span { margin-left: 6px; font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 11px; font-weight: 500; color: var(--ink-muted, #6b6862); }"
+    },
+    {
+      "name": "UX/UI Card",
+      "kind": "card",
+      "refersTo": "ux-card",
+      "description": "UX 개선 하나 = 화면(카드마다 같은 비율) + 제목과 지표 + Before/After 한 줄씩 + 구현 칩. 3열(4개면 4열).",
+      "html": "<article class=\"ds-ux\"><figure class=\"ds-ux-shot\"></figure><div class=\"ds-ux-body\"><p class=\"ds-ux-title\"><span class=\"ds-ux-num\">01</span><strong>클릭은 미리보기, 더블클릭은 워프</strong><span class=\"ds-ux-metric\">1.7s</span></p><dl class=\"ds-ux-ba\"><div class=\"ds-before\"><dt>Before</dt><dd>누르면 곧장 화면이 바뀌어 어디로 왔는지 놓침</dd></div><div class=\"ds-after\"><dt>After</dt><dd>클릭은 패널 미리보기, 더블클릭하면 행성으로 빨려드는 워프</dd></div></dl><p class=\"ds-ux-how\"><span>원통 좌표 모프 보간</span><span>호버 200ms 프리페치</span></p></div></article>",
+      "css": ".ds-ux { display: flex; flex-direction: column; max-width: 400px; overflow: hidden; border: 1px solid var(--line, #d9d6ce); border-radius: 12px; background: var(--paper, #f4f3ef); color: var(--ink, #111110); font-family: var(--f-kr, 'Noto Sans KR Variable', system-ui, sans-serif); word-break: keep-all; } .ds-ux-shot { margin: 0; aspect-ratio: 9 / 10; border-bottom: 1px solid var(--line, #d9d6ce); background: var(--paper-sunk, #eae8e2); } .ds-ux-body { display: flex; flex-direction: column; gap: 14px; padding: 20px 22px 22px; } .ds-ux-title { display: flex; align-items: baseline; gap: 10px; margin: 0; } .ds-ux-num { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 15px; color: var(--accent, #1f2cff); } .ds-ux-title strong { font-family: var(--f-display, 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 20px; font-weight: 600; line-height: 1.3; } .ds-ux-metric { margin-left: auto; font-family: var(--f-display, 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 20px; font-weight: 600; color: var(--accent, #1f2cff); } .ds-ux-ba { display: grid; gap: 8px; margin: 0; } .ds-ux-ba div { display: grid; grid-template-columns: 52px 1fr; gap: 10px; align-items: baseline; } .ds-ux-ba dt { font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted, #6b6862); } .ds-ux-ba dd { margin: 0; font-size: 15.5px; line-height: 1.5; } .ds-before dd { color: var(--ink-muted, #6b6862); } .ds-after dt { color: var(--accent, #1f2cff); } .ds-after dd { font-weight: 600; } .ds-ux-how { display: flex; flex-wrap: wrap; gap: 5px; margin: 0; } .ds-ux-how span { padding: 3px 9px; border: 1px solid var(--line, #d9d6ce); border-radius: 999px; background: var(--paper-sunk, #eae8e2); font-family: var(--f-mono, 'Geist Mono Variable', ui-monospace, monospace); font-size: 11.5px; }"
+    },
+    {
+      "name": "Contribution Figures",
+      "kind": "list",
+      "refersTo": "page",
+      "description": "큰 값(Archivo 600 강조색, tabular)과 그 아래 작은 이름. 표지 빅넘버 56px, 개요 기여 수치 40px, 성과 34px이 같은 문법.",
+      "html": "<ul class=\"ds-fig\"><li><b>82.6%</b><span>FE 코드 작성</span></li><li><b>97%</b><span>3D 렌더링 코드</span></li><li><b>−48.6%</b><span>첫 로드 JS</span></li></ul>",
+      "css": ".ds-fig { display: flex; gap: 34px; margin: 0; padding: 0; list-style: none; font-family: var(--f-kr, 'Noto Sans KR Variable', system-ui, sans-serif); } .ds-fig li { display: grid; gap: 6px; } .ds-fig b { font-family: var(--f-display, 'Archivo Variable', 'Noto Sans KR Variable', system-ui, sans-serif); font-size: 40px; font-weight: 600; line-height: 1; letter-spacing: -0.025em; color: var(--accent, #1f2cff); font-variant-numeric: tabular-nums; } .ds-fig span { font-size: 13px; color: var(--ink-muted, #6b6862); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Evidence Folio (증거 서류철)",
+    "overview": "이 시스템은 화면에서 넘겨 보는 인쇄 문서다. 쪽 하나는 A4 가로 비율의 고정 캔버스(1440×1018)이고, 넓은 화면에서는 캔버스가 통째로 화면 폭에 맞춰 확대·축소되며, 인쇄하면 같은 쪽이 A4 한 장으로 나온다. 모든 쪽은 같은 머리줄과 쪽수를 가진 한 묶음의 서류이고, 그 안의 문장과 숫자는 저장소에서 확인한 근거로만 채운다. 디자인이 할 일은 장식이 아니라 근거가 읽히게 하는 것이다.\n\n재료는 네 가지뿐이다. 따뜻한 미색 종이, 잉크 검정, 1px 선, 그리고 파랑 하나. 그림자는 대표 화면 하나에만 두고, 깊이는 종이의 세 면(밝은 면, 가라앉은 면, 잉크 면)과 선의 두 무게로 만든다. 파랑은 꾸밈이 아니라 표시다. 큰 숫자, 본인이 맡은 것, 내가 고른 선택, 결과에만 붙는다.\n\n그림이 먼저, 글은 한 줄씩. 프로젝트마다 대표 화면 → UX/UI 개선 카드(화면 + 개선 전→후) → 기술 선택 → 문제 해결 순서로 읽히고, 항목 하나는 한 줄을 넘기지 않는다. 각주와 감사 문구는 두지 않고 출처는 수치 상자 아래 한 줄로만 단다. 위계는 크기 경쟁보다 글꼴의 역할 분담으로 잡는다. Archivo는 이름·제목·숫자, Noto Sans KR은 문장, Geist Mono는 라벨·값·메타를 맡는다. 900px보다 좁은 화면에서는 캔버스를 내려놓고, 내용 길이만큼 세로로 이어지는 한 단 문서가 된다.",
+    "keyCharacteristics": [
+      "쪽 = A4 가로 고정 캔버스(1440×1018). 화면은 zoom으로 폭에 맞추고, 인쇄는 쪽당 A4 한 장",
+      "미색 종이 + 잉크 + 1px 선 + 파랑 하나, 화면 이미지가 글보다 먼저",
+      "세 글꼴의 역할 분담: Archivo / Noto Sans KR / Geist Mono",
+      "본인·팀원·외부를 하나의 코드(파랑 선과 틴트 / 회색 선 / 점선)로 구분",
+      "모든 쪽에 같은 머리줄(섹션 번호 · 섹션 이름 · 쪽수), 프로젝트 쪽에는 발줄",
+      "수치는 tabular 숫자와 전/후 막대로 보여 주고, 출처 메모를 함께 단다"
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Rule",
+        "body": "강조색은 Signal Blue 하나이고, 어두운 면에서만 같은 계열의 Lifted Blue로 밝힌다. 두 번째 강조 색상을 들이지 않는다. 파랑은 큰 수치, 본인 담당, 선택과 결과, 번호에만 붙고, 문장 전체나 넓은 면을 칠하지 않는다(예외는 CTA 버튼과 수상 표시 알약 두 가지).",
+        "section": "colors"
+      },
+      {
+        "name": "The Mine-Is-Blue Rule",
+        "body": "본인·팀원·외부 구분은 어디서나 같은 코드를 쓴다. 본인 = 파랑 선과 파랑 10% 틴트, 팀원 = 회색 1px 선(Hairline), 외부 = 같은 회색의 점선. 구조도 노드와 구조도 범례가 이 코드를 따른다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Face Context Rule",
+        "body": "컴포넌트는 원색 토큰이 아니라 면 문맥 변수(--bg, --fg, --fg-muted, --rule, --acc, --chip-bg)로 그린다. 밝은 면, 가라앉은 면, 어두운 면, 인쇄가 이 변수만 바꾸므로 같은 컴포넌트가 네 곳에서 모두 읽힌다. 예외는 UX·기술 선택 카드와 지표 패널의 바탕(paper, paper-sunk 고정)이며, 모두 밝은 쪽에만 놓인다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper-First Print Rule",
+        "body": "인쇄에서는 모든 쪽이 흰 종이가 된다. 세 면의 문맥 변수가 모두 바탕 흰색, 글자 Press Ink, 선 Hairline, 강조 Signal Blue로 바뀌고, 가라앉은 쪽만 Print Sunk로 남는다. 어두운 쪽을 잉크째 인쇄하지 않으며, 모든 색은 print-color-adjust: exact로 그대로 찍는다.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Voices Rule",
+        "body": "Archivo는 이름·제목·숫자, Noto Sans KR은 문장, Geist Mono는 라벨·값·메타를 맡는다. 위계는 크기보다 목소리로 먼저 잡고, 한 요소 안에서 목소리를 섞지 않는다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Figure Rule",
+        "body": "숫자는 언제나 tabular-nums로 쓴다. 큰 수치는 Archivo 600 Signal Blue(표지 56px, 개요 기여 수치 40px, 성과 34px, 개선 폭 30px, UX 카드 지표 20px)로 쓰고, 그 수치의 이름과 근거는 바로 옆에 작은 글자로 붙인다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Keep-All Rule",
+        "body": "한글은 word-break: keep-all과 overflow-wrap: break-word로 단어 중간에서 줄을 바꾸지 않는다. 제목은 balance, 본문은 pretty로 줄을 나눈다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Type Floor Rule",
+        "body": "캔버스 기준 11px이 바닥이다. 11px은 한두 단어짜리 mono 태그(Before/After 라벨, 레벨 이름, '대가' 라벨)에만 쓰고, 문장은 12.5px 이상으로 쓴다. 인쇄 배율 0.7795에서 11px은 약 8.6px이 되므로 바닥을 더 내리지 않는다.",
+        "section": "typography"
+      },
+      {
+        "name": "The Fixed Sheet Rule",
+        "body": "900px 이상과 인쇄에서 쪽은 1440×1018을 벗어나지 않는다. 내용이 넘치면 글자를 바닥 아래로 줄이지 말고 내용을 덜어 내거나 다음 쪽으로 나눈다.",
+        "section": "layout"
+      },
+      {
+        "name": "The Same Page Rule",
+        "body": "화면은 zoom(폭 ÷ 1440), 인쇄는 zoom 0.7795로만 크기를 맞춘다. 900px 이상에서는 쪽 안의 배치를 브레이크포인트로 바꾸지 않는다. 배치를 바꾸는 미디어 쿼리는 `screen and (max-width: 899px)` 하나뿐이다(그 밖에는 머리줄 보조 표기를 숨기는 479px과 인쇄용 쿼리만 있다).",
+        "section": "layout"
+      },
+      {
+        "name": "The Fluid Fallback Rule",
+        "body": "900px 미만에서는 쪽이 한 단 문서가 된다. 축소하면 읽을 수 없게 되는 그림(구조도)은 축소하지 말고, 같은 정보를 세로 목록으로 바꿔 보여 준다.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Paper Rule",
+        "body": "번지는 그라데이션과 반투명 유리 효과를 쓰지 않고, 그림자는 대표 화면 틀의 옅은 아래 그림자 하나뿐이다. 떼어 보여야 할 것은 면을 가라앉히거나 선을 그어서 구분한다. 종이에 인쇄해도 똑같이 읽혀야 한다.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Two-Weight Line Rule",
+        "body": "1px 잉크 선(글자색)은 묶음을 연다. 목록 위, 성과 줄 위, 그리고 프로필·스킬·회고의 블록 제목 아래에 긋는다. 1px 연한 선(Hairline)은 묶음 안의 행을 나눈다. 이 밖의 선 굵기는 2px뿐이다. 개요 쪽 문제 한 줄의 왼쪽 선, 문제 해결 흐름의 세로 연결선(위 절반 Hairline, 아래 절반 파랑으로 딱 끊어짐)과 단계 원 테두리, 연락처 메일 링크의 파랑 밑줄.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** 새 쪽은 쪽 틀로 만든다. 1440×1018 캔버스, 여백 56px 96px 44px, 머리줄(섹션 번호 · 이름 · 쪽수)을 두고, 프로젝트 쪽에는 발줄도 단다.",
+      "**Do** 컴포넌트 색은 면 문맥 변수(--bg, --fg, --fg-muted, --rule, --acc)로 칠해서, 밝은 면, 가라앉은 면, 어두운 면, 인쇄 네 곳에서 모두 확인한다.",
+      "**Do** 개선 수치는 Before/After 막대로 보여 준다. '전'은 보조 글자색, '후'는 Signal Blue로 칠하고, 길이는 전·후·기준선 중 최댓값 기준(최소 2%)으로 잡고, 출처 메모를 단다.",
+      "**Do** 본인·팀원·외부 구분은 The Mine-Is-Blue Rule 하나로 표시한다(파랑 선과 10% 틴트 / Hairline / 점선).",
+      "**Do** 큰 수치는 Archivo 600 Signal Blue tabular-nums로 쓰고, 이름과 근거를 바로 옆에 작은 글자로 붙인다.",
+      "**Do** 묶음을 열 때는 블록 제목(Label + 1px 선)을 쓰고, 행은 1px Hairline으로 나눈다.",
+      "**Do** 900px 미만에서 축소하면 읽히지 않는 그림은 구조도처럼 담당별 세로 목록으로 바꾼다."
+    ],
+    "donts": [
+      "**Don't** 번지는 그라데이션, blur, 반투명 유리 면을 쓰지 않고, 그림자는 대표 화면 틀 밖에 쓰지 않는다. 종이에 인쇄해도 같은 쪽이어야 한다.",
+      "**Don't** 글로 설명하려 하지 않는다. 항목은 한 줄, 개선은 화면 + 전→후로 보여 주고, 각주·감사 문구를 쓰지 않는다.",
+      "**Don't** 두 번째 강조 색상을 들이지 않는다. 어두운 면의 Lifted Blue(#7c84ff)는 같은 파랑을 밝힌 것이지 새 색이 아니다.",
+      "**Don't** 어두운 면에서 Signal Blue(#1f2cff)로 작은 글자를 쓰지 않는다(잉크 위 2.6:1). 강조 변수를 거쳐 Lifted Blue로 쓴다.",
+      "**Don't** 900px 이상에서 쪽 안의 배치를 브레이크포인트로 바꾸지 않는다. 캔버스는 zoom으로만 크기가 바뀐다.",
+      "**Don't** 쪽을 넘기려고 글자를 캔버스 기준 11px 아래로 줄이지 않는다. 내용을 덜어 내거나 쪽을 나눈다.",
+      "**Don't** 제목 위에 작은 mono 라벨(아이브로, 키커)을 얹지 않는다. 쪽 위의 라벨은 머리줄 하나뿐이고, 블록 라벨은 선을 거느린 블록 제목으로만 쓴다.",
+      "**Don't** 아이콘 자리에 글자 기호(→ ↑ ★)나 이모지를 쓰지 않는다. 아이콘은 Icon 컴포넌트의 인라인 SVG(브랜드 로고 채움, 1.75 선 아이콘, Adobe 도구용 글자 배지)만 쓴다. 문장 안의 화살표(292→150KB)는 글자이므로 괜찮다.",
+      "**Don't** hover에만 정보를 맡기지 않는다. hover는 이름 색, 버튼 색, 화살표 이동 같은 확인 신호일 뿐이고, 인쇄에서는 사라진다."
+    ]
+  }
+}

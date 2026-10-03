@@ -1,0 +1,84 @@
+{
+  "title": "포트폴리오의 시각 세계 선택",
+  "question": "추첨으로 '컬러 스와치 카드' 방향이 배정됐습니다. 이대로 갈지, 다른 안을 고를지, 다시 뽑을지 골라주세요.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "컬러 스와치 카드",
+      "kicker": "THE ROLL",
+      "lineage": "디자이너 책상 위 색상 견본 카드 (웹디자인·컴퓨터그래픽스 자격증의 세계)",
+      "thesis": "슬라이드 한 장 = 견본 카드 한 장: 위쪽은 꽉 찬 색 면, 아래는 이름·역할·스택 라벨.",
+      "palette": ["#f4f4f1", "#161616", "#2f5bff", "#ff5a1f", "#0f9d6b"],
+      "materials": ["평평한 단색 면", "흰 라벨 띠", "고정폭 숫자 코드"],
+      "viewport": "A4 가로 한 장, 위 2/3는 파란 색 면 위에 '송호영', 아래 흰 띠에 한줄 소개와 카드 번호 01/07.",
+      "risk": "색이 장마다 바뀌어 산만해질 수 있음 — 프로젝트별 한 색만 쓰고 나머지는 흑백으로 묶어야 함.",
+      "raised": [
+        {"from": "challenger-sneaker", "raise": "이름 · 역할 · 스택 · 번호, 같은 라벨 그리드가 모든 장을 똑같이 지배한다."},
+        {"from": "challenger-cracktro", "raise": "박스·카드·테두리 없음: 위계는 크기와 색 면만으로 만든다."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "설계 도면 시트",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "A4 가로 제도 용지의 테두리와 표제란",
+      "thesis": "각 장은 도면 한 장: 얇은 외곽 테두리, 오른쪽 아래 표제란(프로젝트·역할·스택·SHEET 03/07).",
+      "palette": ["#fbfbf8", "#1a1a1a", "#8a8a85", "#d93a1e"],
+      "materials": ["헤어라인 테두리", "표제란 표", "치수선"],
+      "viewport": "테두리 안 흰 도면에 큰 이름, 표제란에 한줄 소개와 시트 번호.",
+      "risk": "A4 인쇄에는 가장 자연스럽지만 흔히 보이는 '미니멀 그리드' 인상에 가까움."
+    },
+    {
+      "id": "challenger-sneaker",
+      "label": "스니커 박스 아카이브",
+      "verdict": "declined",
+      "lineage": "신발 박스가 쌓인 벽",
+      "thesis": "프로젝트가 박스 끝 라벨처럼 쌓인 벽.",
+      "palette": ["#e0661f", "#111111", "#f7f5ef"],
+      "materials": ["골판지", "라인 실루엣"],
+      "viewport": "박스 끝 라벨들이 쌓인 벽.",
+      "case": "채용 담당자가 공감하기 어렵고, 인쇄 시 3D 효과가 사라짐.",
+      "kept": "모든 장을 지배하는 동일한 라벨 그리드.",
+      "risk": "주제와 무관한 코스튬.",
+      "hero": "https://impeccable.style/worlds/cards/textiles-weave-drape-fashion-sneaker-box-stacks-hero.webp"
+    },
+    {
+      "id": "challenger-cracktro",
+      "label": "크랙트로 타이틀",
+      "verdict": "declined",
+      "lineage": "데모씬 검은 화면 스크롤러",
+      "thesis": "검은 공간 위 비트맵 글자, 깊이가 곧 위계.",
+      "palette": ["#050505", "#e8e2d0", "#ffb000"],
+      "materials": ["비트맵 폰트", "떠다니는 먼지"],
+      "viewport": "검은 화면에 한 줄의 이름.",
+      "case": "검은 배경은 A4 출력에 부적합하고 '미니멀' 요청과 결이 다름.",
+      "kept": "박스·테두리 없이 위계를 만드는 절제.",
+      "risk": "인쇄 불가 수준의 잉크 소모.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-cracktro-scroller-queue-hero.webp"
+    },
+    {
+      "id": "challenger-dive",
+      "label": "심해 다이브",
+      "verdict": "declined",
+      "lineage": "다이브 컴퓨터와 수심 축",
+      "thesis": "스크롤이 곧 수심.",
+      "palette": ["#06203a", "#2fd0d6", "#f2f2f2"],
+      "materials": ["수심 축", "파티클"],
+      "viewport": "수면에서 내려가는 세로 축.",
+      "case": "포트폴리오 내용과 연결 고리가 약함.",
+      "kept": "하나의 세로 축이 모든 장의 위치를 알려준다.",
+      "risk": "연출이 내용을 가림."
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "canon": true,
+  "canonCard": {
+    "label": "일반적인 개발자 포트폴리오",
+    "thesis": "흰 배경, 큰 제목, 스킬 태그, 프로젝트 카드 — 흔한 형태를 완성도 높게.",
+    "palette": ["#ffffff", "#111827", "#2563eb"],
+    "materials": ["깔끔한 그리드", "태그 칩"],
+    "viewport": "왼쪽 이름과 소개, 오른쪽 여백.",
+    "risk": "다른 포트폴리오와 구분되지 않음."
+  },
+  "steer": true
+}
