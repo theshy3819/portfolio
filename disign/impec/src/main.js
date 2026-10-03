@@ -23,3 +23,38 @@ setScale()
 addEventListener('resize', setScale)
 
 createApp(App).mount('#app')
+
+// 넓은 화면에서 ↑·↓(PageUp·PageDown)을 누르면 한 쪽씩 넘김. 좁은 화면은 쪽이 창보다 길어 기본 스크롤 그대로.
+// 키를 연달아 누르면 스크롤이 끝나기 전이라도 마지막으로 향한 쪽을 기준으로 다음 쪽을 고름.
+const wide = matchMedia('(min-width: 900px)')
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)')
+const KEYS = { ArrowDown: 1, PageDown: 1, ArrowUp: -1, PageUp: -1 }
+let target = -1
+let lastPress = 0
+function nearestPage(pages) {
+  const mid = innerHeight / 2
+  let best = 0
+  let bestD = Infinity
+  pages.forEach((p, i) => {
+    const r = p.getBoundingClientRect()
+    const d = Math.abs(r.top + r.height / 2 - mid)
+    if (d < bestD) {
+      bestD = d
+      best = i
+    }
+  })
+  return best
+}
+addEventListener('keydown', (e) => {
+  const dir = KEYS[e.key]
+  if (!dir || !wide.matches || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return
+  if (e.target.closest?.('input, textarea, select, [contenteditable]')) return
+  const pages = [...document.querySelectorAll('.page')]
+  if (!pages.length) return
+  const now = performance.now()
+  const from = now - lastPress < 700 && target >= 0 ? target : nearestPage(pages)
+  target = Math.min(pages.length - 1, Math.max(0, from + dir))
+  lastPress = now
+  e.preventDefault()
+  pages[target].scrollIntoView({ block: 'center', behavior: reduceMotion.matches ? 'auto' : 'smooth' })
+})

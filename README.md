@@ -5,6 +5,11 @@
 프론트엔드와 백엔드 개발에 관심을 가지고 있으며, AI를 활용한 서비스 개발을 공부하고 있습니다.
 꾸준한 학습과 기록을 통해 성장하는 개발자가 되는 것을 목표로 합니다.
 
+## Portfolio
+
+- 사이트: https://theshy3819.github.io/portfolio/
+- 소스: [`disign/impec`](disign/impec) (Vue 3 + Vite, A4 가로 15쪽 — 화면에서는 ↑·↓로 한 쪽씩 넘김, 인쇄하면 쪽당 A4 한 장)
+
 ## Education
 
 - 삼성 청년 SW 아카데미(SSAFY) 15기
