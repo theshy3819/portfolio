@@ -469,7 +469,7 @@ export const projects = [
     "role": "Web 풀스택",
     "summary": "저시력자 동행 로봇을 지켜보는 관제 웹",
     "background": {
-      "headline": "저시력자의 불편을 덜어 줄 AI 안전 보행 로봇",
+      "headline": "저시력자를 위한 AI 기반 실내 안전 동행 로봇",
       "points": [
         "ROS2 SLAM과 라이다로 실내 지도를 만들고 자율주행",
         "Jetson 보드에서 YOLO로 장애물 인식⁠·⁠회피",
