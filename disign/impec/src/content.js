@@ -258,9 +258,9 @@ export const projects = [
     "name": "COSMOS",
     "icon": "cosmos.png",
     "title": "기업 관계를 3D 은하로 탐색하는 서비스",
+    "award": "2026 뉴스빅데이터 해커톤 본선 진출 (한국언론진흥재단)",
     "period": "2026.08 ~ 2026.09 (5주)",
     "team": "6인 · FE 2 · BE 2 · Data 1 · AI 1",
-    "award": "",
     "hero": {
       "layout": "web-phones",
       "web": "cosmos-hero.jpg",
