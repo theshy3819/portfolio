@@ -21,7 +21,7 @@
 
 ## Projects
 
-### COSMOS — 기업 관계를 3D 은하로 탐색하는 서비스
+### COSMOS — 빅데이터 기반 AI 활용 기업 관계 시각화 서비스
 
 `2026.08 ~ 09` · 6인 · 역할 **FE** · React · TypeScript · Three.js · TanStack Query
 

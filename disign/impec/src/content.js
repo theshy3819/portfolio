@@ -257,7 +257,7 @@ export const projects = [
     "id": "cosmos",
     "name": "COSMOS",
     "icon": "cosmos.png",
-    "title": "기업 관계를 3D 은하로 탐색하는 서비스",
+    "title": "빅데이터 기반 AI 활용 기업 관계 시각화 서비스",
     "award": "2026 뉴스빅데이터 해커톤 본선 진출 (한국언론진흥재단)",
     "period": "2026.08 ~ 2026.09 (5주)",
     "team": "6인 · FE 2 · BE 2 · Data 1 · AI 1",
@@ -276,7 +276,7 @@ export const projects = [
     },
     "ux_lead": "처음 보는 3D 관계망에서도 길을 잃지 않도록",
     "role": "FE",
-    "summary": "기업 관계를 3D 은하로 탐색하는 서비스",
+    "summary": "빅데이터 기반 AI 활용 기업 관계 시각화 서비스",
     "background": {
       "headline": "수많은 뉴스⁠·⁠공시로 기업 관계를 산출할 수 없을까?",
       "points": [
