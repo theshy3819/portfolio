@@ -1,0 +1,1207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "number",
+      "const": 1
+    },
+    "industry": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "string",
+      "description": "청사진의 레이아웃 id. 예: c1"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "clearWater",
+        "roseMosaic",
+        "yellowSign",
+        "facilityWalk",
+        "inkNavy",
+        "stonePaper"
+      ]
+    },
+    "business": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "kind": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "업종 표기. 예: 예약제 1인 피부관리실"
+        },
+        "phone": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "address": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "addressNote": {
+          "description": "주차·층수 등",
+          "type": "string",
+          "maxLength": 60
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "hours": {
+          "minItems": 7,
+          "maxItems": 7,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "wd": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 6,
+                "description": "0=일 … 6=토"
+              },
+              "open": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "null 이면 정기 휴무"
+              },
+              "close": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lunch": {
+                "description": "이 요일에 점심시간이 있는지",
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "wd",
+              "open",
+              "close"
+            ]
+          }
+        },
+        "lunch": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "string",
+              "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+            },
+            {
+              "type": "string",
+              "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "closedDates": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 20
+              }
+            },
+            "required": [
+              "date",
+              "label"
+            ]
+          }
+        },
+        "offerings": {
+          "default": [],
+          "maxItems": 30,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]+$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "desc": {
+                "type": "string",
+                "maxLength": 60
+              },
+              "price": {
+                "description": "사장님이 준 값 그대로. 예: 60,000원",
+                "type": "string",
+                "maxLength": 20
+              },
+              "time": {
+                "type": "string",
+                "maxLength": 20
+              },
+              "badge": {
+                "type": "string",
+                "maxLength": 10
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ]
+          }
+        },
+        "people": {
+          "default": [],
+          "maxItems": 20,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]+$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20
+              },
+              "role": {
+                "type": "string",
+                "maxLength": 30
+              },
+              "lines": {
+                "maxItems": 8,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 60
+                },
+                "description": "학력·경력·자격 등 사실 줄"
+              },
+              "photo": {
+                "type": "object",
+                "properties": {
+                  "hint": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 60,
+                    "description": "이 칸에 들어갈 사진 설명. 예: 창가 햇살이 드는 관리실"
+                  },
+                  "src": {
+                    "type": "string"
+                  },
+                  "alt": {
+                    "type": "string",
+                    "maxLength": 120
+                  }
+                },
+                "required": [
+                  "hint"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "role",
+              "lines"
+            ]
+          }
+        },
+        "registration": {
+          "description": "사업자·개설 신고 등 푸터 표기",
+          "type": "string",
+          "maxLength": 80
+        }
+      },
+      "required": [
+        "name",
+        "kind",
+        "phone",
+        "address",
+        "hours"
+      ]
+    },
+    "sections": {
+      "minItems": 3,
+      "maxItems": 16,
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "notice"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "bar"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "maxLength": 60
+                  },
+                  "tone": {
+                    "default": "info",
+                    "type": "string",
+                    "enum": [
+                      "info",
+                      "closed"
+                    ]
+                  }
+                },
+                "required": [
+                  "text"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "header"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "top",
+                  "rail"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "maxItems": 6,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "maxLength": 8
+                        },
+                        "to": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "to"
+                      ]
+                    }
+                  },
+                  "cta": {
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 16
+                      },
+                      "action": {
+                        "type": "string",
+                        "enum": [
+                          "inquiry",
+                          "call",
+                          "map",
+                          "section"
+                        ],
+                        "description": "inquiry=문의 폼으로, call=전화, map=오시는 길, section=to 로 이동"
+                      },
+                      "to": {
+                        "type": "string"
+                      },
+                      "style": {
+                        "default": "fill",
+                        "type": "string",
+                        "enum": [
+                          "fill",
+                          "line"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "label",
+                      "action"
+                    ]
+                  }
+                },
+                "required": [
+                  "links"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "hero"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "split",
+                  "mosaic",
+                  "sign",
+                  "cover",
+                  "statement"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "maxLength": 40,
+                    "description": "비우면 업체 이름"
+                  },
+                  "sub": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "images": {
+                    "default": [],
+                    "description": "split·cover·sign=1장, mosaic=3장, statement=0장",
+                    "maxItems": 3,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "hint": {
+                          "type": "string",
+                          "minLength": 2,
+                          "maxLength": 60,
+                          "description": "이 칸에 들어갈 사진 설명. 예: 창가 햇살이 드는 관리실"
+                        },
+                        "src": {
+                          "type": "string"
+                        },
+                        "alt": {
+                          "type": "string",
+                          "maxLength": 120
+                        }
+                      },
+                      "required": [
+                        "hint"
+                      ]
+                    }
+                  },
+                  "facts": {
+                    "maxItems": 4,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "maxLength": 10
+                        },
+                        "value": {
+                          "type": "string",
+                          "maxLength": 30
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    }
+                  },
+                  "cta": {
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16
+                        },
+                        "action": {
+                          "type": "string",
+                          "enum": [
+                            "inquiry",
+                            "call",
+                            "map",
+                            "section"
+                          ],
+                          "description": "inquiry=문의 폼으로, call=전화, map=오시는 길, section=to 로 이동"
+                        },
+                        "to": {
+                          "type": "string"
+                        },
+                        "style": {
+                          "default": "fill",
+                          "type": "string",
+                          "enum": [
+                            "fill",
+                            "line"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "action"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "title",
+                  "cta"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "about"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "facts",
+                  "split"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "body": {
+                    "type": "string",
+                    "maxLength": 300
+                  },
+                  "facts": {
+                    "default": [],
+                    "maxItems": 5,
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 40
+                    }
+                  },
+                  "image": {
+                    "type": "object",
+                    "properties": {
+                      "hint": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 60,
+                        "description": "이 칸에 들어갈 사진 설명. 예: 창가 햇살이 드는 관리실"
+                      },
+                      "src": {
+                        "type": "string"
+                      },
+                      "alt": {
+                        "type": "string",
+                        "maxLength": 120
+                      }
+                    },
+                    "required": [
+                      "hint"
+                    ]
+                  }
+                },
+                "required": [
+                  "title",
+                  "body"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "offerings"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "list",
+                  "board",
+                  "chips",
+                  "cards"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "desc": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "note": {
+                    "description": "가격 안내 등 아래 작은 글",
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "groups": {
+                    "description": "board 에서 묶음",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "maxLength": 12
+                        },
+                        "ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "ids"
+                      ]
+                    }
+                  },
+                  "ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "title"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "people"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "text",
+                  "profiles"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "desc": {
+                    "type": "string",
+                    "maxLength": 80
+                  }
+                },
+                "required": [
+                  "title"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "gallery"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "mosaic",
+                  "walk"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "desc": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "items": {
+                    "minItems": 2,
+                    "maxItems": 6,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "image": {
+                          "type": "object",
+                          "properties": {
+                            "hint": {
+                              "type": "string",
+                              "minLength": 2,
+                              "maxLength": 60,
+                              "description": "이 칸에 들어갈 사진 설명. 예: 창가 햇살이 드는 관리실"
+                            },
+                            "src": {
+                              "type": "string"
+                            },
+                            "alt": {
+                              "type": "string",
+                              "maxLength": 120
+                            }
+                          },
+                          "required": [
+                            "hint"
+                          ]
+                        },
+                        "caption": {
+                          "type": "string",
+                          "maxLength": 40
+                        }
+                      },
+                      "required": [
+                        "image",
+                        "caption"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "title",
+                  "items"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "steps"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "list",
+                  "columns"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "items": {
+                    "minItems": 2,
+                    "maxItems": 5,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "maxLength": 20
+                        },
+                        "body": {
+                          "type": "string",
+                          "maxLength": 80
+                        }
+                      },
+                      "required": [
+                        "title",
+                        "body"
+                      ]
+                    }
+                  },
+                  "note": {
+                    "type": "string",
+                    "maxLength": 80
+                  }
+                },
+                "required": [
+                  "title",
+                  "items"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "faq"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "accordion"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "items": {
+                    "minItems": 2,
+                    "maxItems": 8,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "q": {
+                          "type": "string",
+                          "maxLength": 60
+                        },
+                        "a": {
+                          "type": "string",
+                          "maxLength": 240
+                        }
+                      },
+                      "required": [
+                        "q",
+                        "a"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "title",
+                  "items"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "hours"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "table",
+                  "board"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "note": {
+                    "type": "string",
+                    "maxLength": 80
+                  }
+                },
+                "required": [
+                  "title"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "location"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "split",
+                  "stack"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "directions": {
+                    "default": [],
+                    "maxItems": 4,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "maxLength": 8
+                        },
+                        "text": {
+                          "type": "string",
+                          "maxLength": 80
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "text"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "title"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "inquiry"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "form",
+                  "split"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "desc": {
+                    "type": "string",
+                    "maxLength": 120
+                  },
+                  "fields": {
+                    "type": "object",
+                    "properties": {
+                      "date": {
+                        "default": true,
+                        "type": "boolean"
+                      },
+                      "picks": {
+                        "default": true,
+                        "description": "offerings 칩으로 희망 항목 고르기",
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "default": null,
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "label": {
+                                "type": "string",
+                                "maxLength": 16
+                              },
+                              "placeholder": {
+                                "type": "string",
+                                "maxLength": 60
+                              }
+                            },
+                            "required": [
+                              "label",
+                              "placeholder"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "sensitiveConsent": {
+                    "default": false,
+                    "description": "건강·사건 정보처럼 민감정보가 담길 때 별도 동의",
+                    "type": "boolean"
+                  },
+                  "submitLabel": {
+                    "type": "string",
+                    "maxLength": 12
+                  },
+                  "doneMessage": {
+                    "type": "string",
+                    "maxLength": 120
+                  }
+                },
+                "required": [
+                  "title",
+                  "fields",
+                  "submitLabel",
+                  "doneMessage"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "페이지 안 이동에 쓰는 이름"
+              },
+              "type": {
+                "type": "string",
+                "const": "footer"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "simple"
+                ]
+              },
+              "props": {
+                "type": "object",
+                "properties": {
+                  "lines": {
+                    "default": [],
+                    "maxItems": 3,
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 80
+                    }
+                  }
+                }
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "variant",
+              "props"
+            ]
+          }
+        ]
+      }
+    },
+    "dock": {
+      "default": true,
+      "description": "휴대폰 하단 전화·문의 두 칸 바",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "version",
+    "industry",
+    "layout",
+    "theme",
+    "business",
+    "sections"
+  ]
+}
