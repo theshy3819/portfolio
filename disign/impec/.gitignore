@@ -1,3 +1,8 @@
 node_modules
 dist
 .impeccable/review
+.impeccable/questions
+
+# 공개 저장소에 올리지 않는 개인 자료
+src/assets/profile.jpg
+docs/포트폴리오_보완_체크리스트.md
