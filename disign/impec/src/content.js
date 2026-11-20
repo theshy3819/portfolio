@@ -1,12 +1,12 @@
 // 포트폴리오 내용. 이 파일만 고치면 사이트·인쇄물이 함께 바뀝니다.
-// 프로젝트 내용은 각 저장소(주만추 · S15P11C201 · S15P21C205)의 본인 커밋·코드와 팀 발표 자료에서 확인한 사실만 담았습니다.
+// 프로젝트 내용은 각 저장소(주만추 · S15P11C201 · S15P21C205 · S15P31F110 · webo-docs)의 본인 커밋·코드와 팀 발표 자료에서 확인한 사실만 담았습니다.
 // 화면 이미지: src/assets/shots/ 에 파일을 넣고 hero.file 또는 ux[].file 에 파일 이름을 적습니다.
 
 export const meta = {
   "name": "송호영",
   "nameEn": "Song Hoyoung",
   "role": "Front-end Engineer",
-  "date": "2026.10"
+  "date": "2026.11"
 }
 
 export const contact = {
@@ -98,7 +98,7 @@ export const skills = [
       {
         "name": "TypeScript",
         "level": 3,
-        "evidence": "COSMOS",
+        "evidence": "COSMOS · WebO",
         "icon": "typescript"
       },
       {
@@ -110,7 +110,7 @@ export const skills = [
       {
         "name": "React",
         "level": 3,
-        "evidence": "COSMOS",
+        "evidence": "COSMOS · WebO",
         "icon": "react"
       },
       {
@@ -253,6 +253,184 @@ export const skills = [
 ]
 
 export const projects = [
+  {
+    "id": "webo",
+    "name": "WebO",
+    "icon": "webo.svg",
+    "title": "말하면 홈페이지가 되는 AI 홈페이지 제작 서비스",
+    "period": "2026.09 ~ 2026.11 (약 7주)",
+    "team": "6인 · PO 1 · FE 1(본인) · BE·AI 1 · QA 3",
+    "award": "",
+    "hero": {
+      "layout": "web-phone",
+      "web": "webo-hero.jpg",
+      "phones": [
+        "webo-phone-pension.webp"
+      ],
+      "glow": [
+        "#1e6bff",
+        "#b06cf5"
+      ],
+      "caption": "관리 화면 말로 고치기(시연 매장) · 직접 만든 펜션 시안 휴대폰 화면"
+    },
+    "ux_lead": "업종마다 바로 쓸 화면을, 손님이 믿을 수 있게",
+    "role": "FE · UX/UI",
+    "summary": "채팅으로 매장 홈페이지를 만들고 고치는 서비스",
+    "background": {
+      "headline": "말만 하면 우리 가게 홈페이지가 생길 수 없을까?",
+      "points": [
+        "업종별로 검증한 시안에 AI가 사장님 정보만 채워 첫 화면 완성",
+        "말로 고치면 LLM은 작업 목록만 내고, 코드가 검증한 뒤 적용",
+        "승인한 판만 Cloudflare 엣지에 게시해 손님에게 서빙"
+      ]
+    },
+    "ux": [
+      {
+        "title": "업종별 시안 223개",
+        "desc": "GDWEB·Awwwards 선정작 84곳을 분석해 6개 업종 화면을 직접 설계",
+        "file": "webo-ux-drafts.jpg",
+        "caption": "업종별 시안 첫 화면 6벌"
+      },
+      {
+        "title": "AI 사진은 AI라고",
+        "desc": "AI로 만든 사진·가상 인물에 표시를 달고, 렌더러는 대체 글에도 같이 적음",
+        "file": "webo-ux-aitag.jpg",
+        "caption": "카페 시안 휴대폰 첫 화면"
+      },
+      {
+        "title": "두 폭 자동 검사",
+        "desc": "PC 1440px·휴대폰 390px에서 사진 위 글자 대비와 가로 넘침을 잡는 검사기 제작",
+        "file": "webo-ux-check.jpg",
+        "caption": "같은 시안의 PC·휴대폰 화면"
+      }
+    ],
+    "arch": {
+      "lead": "사장님 말 한마디가 매장 사이트가 되기까지",
+      "notes": [
+        "LLM은 정해 둔 필드만 받아 JSON 작업 목록을 내고, 서버가 연산 34종 안에서 검증",
+        "매장 데이터는 PostgreSQL RLS로 격리하고, 승인한 판만 서명해 게시",
+        "엣지는 오리진을 부르지 않고 섹션 컴포넌트로 페이지를 그림"
+      ]
+    },
+    "architecture": {
+      "nodes": [
+        {
+          "id": "drafts",
+          "icon": "html",
+          "label": "레이아웃 시안",
+          "sub": "6개 업종 223개",
+          "owner": "mine",
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "admin",
+          "icon": "react",
+          "label": "관리 화면",
+          "sub": "React·말로 고치기",
+          "owner": "mine",
+          "col": 0,
+          "row": 1
+        },
+        {
+          "id": "llm",
+          "icon": "sparkles",
+          "label": "LLM",
+          "sub": "JSON 작업 목록",
+          "owner": "external",
+          "col": 0,
+          "row": 2
+        },
+        {
+          "id": "comps",
+          "icon": "layers",
+          "label": "섹션 컴포넌트",
+          "sub": "레이아웃·CSP 렌더",
+          "owner": "mine",
+          "col": 1,
+          "row": 0
+        },
+        {
+          "id": "api",
+          "icon": "fastapi",
+          "label": "FastAPI",
+          "sub": "연산 검증·게시 승인",
+          "owner": "team",
+          "col": 1,
+          "row": 1
+        },
+        {
+          "id": "db",
+          "icon": "postgresql",
+          "label": "PostgreSQL",
+          "sub": "RLS 매장 격리",
+          "owner": "team",
+          "col": 1,
+          "row": 2
+        },
+        {
+          "id": "edge",
+          "icon": "cloud",
+          "label": "Cloudflare 엣지",
+          "sub": "서명된 판만 서빙",
+          "owner": "team",
+          "col": 2,
+          "row": 1
+        },
+        {
+          "id": "site",
+          "icon": "image",
+          "label": "매장 사이트",
+          "sub": "손님 방문·상담",
+          "owner": "external",
+          "col": 3,
+          "row": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": "drafts",
+          "to": "comps",
+          "label": "시안 이식"
+        },
+        {
+          "from": "admin",
+          "to": "api",
+          "label": "말·승인"
+        },
+        {
+          "from": "api",
+          "to": "llm",
+          "label": "필드만 전송"
+        },
+        {
+          "from": "llm",
+          "to": "api",
+          "label": "작업 목록"
+        },
+        {
+          "from": "api",
+          "to": "db",
+          "label": "검증된 수정"
+        },
+        {
+          "from": "api",
+          "to": "edge",
+          "label": "서명한 판"
+        },
+        {
+          "from": "comps",
+          "to": "edge",
+          "label": "렌더 함수"
+        },
+        {
+          "from": "edge",
+          "to": "site",
+          "label": "페이지"
+        }
+      ]
+    }
+  },
   {
     "id": "cosmos",
     "name": "COSMOS",
