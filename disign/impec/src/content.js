@@ -277,7 +277,7 @@ export const projects = [
     "role": "FE · UX/UI",
     "summary": "채팅으로 매장 홈페이지를 만들고 고치는 서비스",
     "background": {
-      "headline": "말만 하면 우리 가게 홈페이지가 생길 수 없을까?",
+      "headline": "말만 했는데 우리 가게 홈페이지가 생긴다면?",
       "points": [
         "업종별로 검증한 시안에 AI가 사장님 정보만 채워 첫 화면 완성",
         "말로 고치면 LLM은 작업 목록만 내고, 코드가 검증한 뒤 적용",
