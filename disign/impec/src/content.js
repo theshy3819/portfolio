@@ -292,10 +292,10 @@ export const projects = [
         "caption": "업종별 시안 첫 화면 6벌"
       },
       {
-        "title": "AI 사진은 AI라고",
-        "desc": "AI로 만든 사진·가상 인물에 표시를 달고, 렌더러는 대체 글에도 같이 적음",
-        "file": "webo-ux-aitag.jpg",
-        "caption": "카페 시안 휴대폰 첫 화면"
+        "title": "광고법 표현은 게시 전에",
+        "desc": "광고 경험으로 '치료·시술' 등 금지 표현을 막고 고쳐 게시하는 흐름 설계",
+        "file": "webo-ux-gate.jpg",
+        "caption": "피부관리실 금지 표현 안내와 바꿀 문구"
       },
       {
         "title": "두 폭 자동 검사",
