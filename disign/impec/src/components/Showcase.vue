@@ -35,7 +35,6 @@ const blobs = (c) => {
         <img class="phone" :src="p" :alt="`${name} 모바일 화면 ${i + 1}`" />
       </div>
     </div>
-    <figcaption v-if="hero.caption" class="caption">{{ hero.caption }}</figcaption>
   </figure>
 </template>
 
@@ -47,11 +46,6 @@ const blobs = (c) => {
   gap: 18px;
   min-width: 0;
   margin: 0;
-}
-
-.caption {
-  font-size: 17px;
-  color: var(--fg-muted);
 }
 
 /* 모든 위치는 무대 폭 기준 % — 화면 크기와 인쇄 배율이 달라도 같은 구도 */

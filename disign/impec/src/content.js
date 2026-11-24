@@ -270,8 +270,7 @@ export const projects = [
       "glow": [
         "#1e6bff",
         "#b06cf5"
-      ],
-      "caption": "관리 화면 말로 고치기(시연 매장) · 직접 만든 펜션 시안 휴대폰 화면"
+      ]
     },
     "ux_lead": "업종마다 바로 쓸 화면을, 손님이 믿을 수 있게",
     "role": "FE · UX/UI",
@@ -449,8 +448,7 @@ export const projects = [
       "glow": [
         "#3b2fff",
         "#8f5bff"
-      ],
-      "caption": "PC 전체 은하 · 모바일 은하와 기업 패널"
+      ]
     },
     "ux_lead": "처음 보는 3D 관계망에서도 길을 잃지 않도록",
     "role": "FE",
@@ -640,8 +638,7 @@ export const projects = [
       "glow": [
         "#ffb547",
         "#ff8a3d"
-      ],
-      "caption": "관제 대시보드 · Lumi 로봇 일러스트"
+      ]
     },
     "ux_lead": "관리자가 로봇 상태를 오해하지 않도록",
     "role": "Web 풀스택",
@@ -822,8 +819,7 @@ export const projects = [
       "glow": [
         "#ff4fa3",
         "#ff3d5a"
-      ],
-      "caption": "메인 화면 다크 모드(시세는 예시) · 모바일 홈"
+      ]
     },
     "ux_lead": "처음 투자하는 사람도 부담 없이 넘겨 보도록",
     "role": "FE",
