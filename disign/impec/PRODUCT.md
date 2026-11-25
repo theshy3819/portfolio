@@ -32,7 +32,7 @@ Vue 3 + Vite (user chose "Vue / React 프로젝트"; Vue picked because it is in
 - 역할: COSMOS·주만추 "FE", Lumi "Web 풀스택"(2026-10-03 본인 요청). 아키텍처 노드마다 라이브러리·도구 로고(Hadoop·Spark·PostgreSQL·Spring Boot·TypeScript·TanStack Query·Three.js·React / ROS·Bluetooth·NVIDIA·nginx·Docker·FastAPI·SQLite·Vue / Redis·Django·Axios·Pinia 등).
 - 글은 짧게: 항목당 한 줄, 각주·감사 문구 없이 출처는 수치 상자 아래 한 줄만. 보는 사람이 피로하지 않게 화면 이미지가 먼저 보이도록.
 - 쪽 하나 = A4 가로 (1440×1018 캔버스). 넓은 화면은 화면 폭에 맞춰 확대·축소, 인쇄는 쪽당 A4 한 장(어두운 쪽은 밝게), 900px 미만은 세로로 쌓임.
-- 지원 직무: Front-end Engineer. 프로젝트 순서 COSMOS → Lumi → 주만추.
+- 지원 직무: AI Developer(2026-11-25 변경, 본인 요청: "AI 기능을 알고 연동 서비스를 구현할 수 있으니 AI Developer로. FE는 틀이 너무 작다"). 이전 표기 Front-end Engineer. 프로젝트별 역할(FE · UX/UI · Web 풀스택)은 실제 담당 그대로 둔다.
 - 모든 프로젝트 내용은 로컬 저장소(C:/shy/S15P21C205·galaxy_web, C:/shy/S15P11C201, C:/shy/portfolio/jumanchu)의 본인 커밋·코드에서 검증한 사실만. 내용 원본: src/content.js.
 - 화면 이미지: src/assets/shots/ (content.js의 hero.file · ux[].file). COSMOS = 배포 서비스·최종 발표 화면, Lumi = 로컬 실행(시뮬레이터 데이터), 주만추 = 최종 빌드 재실행 캡처 + 대표 화면은 다크 모드에 적용된 목업(jumanchu_market_pulse_v5, 시세는 예시). 원본·자르기 설정은 세션 스크래치패드(crop-spec*.json).
 - GitHub: github.com/theshy3819 (2026-10-02 본인 제공, 공개 저장소 5개 확인). 깃허브 계정 이메일은 표시하지 않음 — 연락 이메일은 shy3819@naver.com 하나.
@@ -43,7 +43,7 @@ Vue 3 + Vite (user chose "Vue / React 프로젝트"; Vue picked because it is in
 ## Brand Commitments
 
 - 구성·시각 기준: 사용자가 준 Figma "DDESIGN — Interactive Portfolio Site" (file mQhcGf00A028JPLAunVaMq, node 5:2). 미색 종이 바탕 + 잉크 검정 섹션, 파랑 포인트 #1f2cff, Archivo · Geist Mono · Noto Sans KR. (이전의 다크 슬라이드 덱은 폐기)
-- 표지 워드마크 "포트폴리오"는 Figma에서 유지. 직무 표기는 FRONT-END ENGINEER(2026-10-02 사용자 선택).
+- 표지 워드마크 "포트폴리오"는 Figma에서 유지. 직무 표기는 AI DEVELOPER(2026-11-25 변경, 이전 FRONT-END ENGINEER).
 - Figma의 견본 내용(다른 프로젝트, Process 기간, Availability 등)은 사용자의 실제 내용으로 대체한다.
 - 스킬은 로고 아이콘과 함께 표시한다.
 

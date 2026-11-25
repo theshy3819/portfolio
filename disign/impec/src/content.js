@@ -5,7 +5,7 @@
 export const meta = {
   "name": "송호영",
   "nameEn": "Song Hoyoung",
-  "role": "Front-end Engineer",
+  "role": "AI Developer",
   "date": "2026.11"
 }
 
@@ -18,7 +18,7 @@ export const contact = {
 }
 
 export const profile = {
-  "role": "Front-end Engineer",
+  "role": "AI Developer",
   "catchphrase": "사용성을 설계하며 성장하는 개발자입니다",
   "intro_headline": "UX/UI 디자이너에서 개발자로",
   "intro": ""
