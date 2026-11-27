@@ -61,5 +61,8 @@ try {
   chrome.kill()
   await server.close()
   await sleep(300)
-  rmSync(profileDir, { recursive: true, force: true, maxRetries: 3 })
+  // 임시 Chrome 프로필 정리: Chrome이 파일을 늦게 놓으면 못 지울 수 있지만 PDF는 이미 저장됐으므로 무시
+  try {
+    rmSync(profileDir, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 })
+  } catch {}
 }

@@ -162,8 +162,29 @@ function bring(i, e) {
   setHot()
 }
 
+// 인쇄(PDF)할 때는 넘기는 중간이 찍히지 않게: 펼친 채 첫 프로젝트(WebO)가 가운데인 모습으로 고정
+function snap() {
+  clearTimeout(timer)
+  for (const s of [appear, fan]) Object.assign(s, { x: 1, t: 1, v: 0 })
+  Object.assign(phase, { x: 0, t: 0, v: 0 })
+  setHot()
+  per.value.forEach((c) => {
+    Object.assign(c.lift, { x: c.lift.t, v: 0 })
+    Object.assign(c.sc, { x: c.sc.t, v: 0 })
+  })
+  render()
+}
+function unsnap() {
+  if (started && fan.t === 1) schedule()
+}
+const printing = matchMedia('print')
+const onPrintChange = (e) => (e.matches ? snap() : unsnap())
+
 let io
 onMounted(() => {
+  addEventListener('beforeprint', snap)
+  addEventListener('afterprint', unsnap)
+  printing.addEventListener('change', onPrintChange)
   render()
   io = new IntersectionObserver(
     ([e]) => {
@@ -184,6 +205,9 @@ onMounted(() => {
   io.observe(stage.value)
 })
 onBeforeUnmount(() => {
+  removeEventListener('beforeprint', snap)
+  removeEventListener('afterprint', unsnap)
+  printing.removeEventListener('change', onPrintChange)
   io?.disconnect()
   cancelAnimationFrame(raf)
   clearTimeout(timer)
