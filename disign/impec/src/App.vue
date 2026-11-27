@@ -32,7 +32,9 @@ const worksFor = (list) => (list ?? []).map((w) => ({ ...w, src: fileFor(w.file)
 
 // 쪽 구성: 표지 · 프로필 · 스킬 · 개발자가 된 이유 · 목차 · 프로젝트(개요·기획 배경 · UI 개선 · 아키텍처) · 연락처
 const list = []
-list.push({ is: CoverPage, props: { meta, profile } })
+// 표지에도 프로젝트 화면을 보여 주므로 목차처럼 프로젝트 목록을 나중에 채움
+const coverEntry = { is: CoverPage, props: { meta, profile, projects: [] } }
+list.push(coverEntry)
 list.push({ is: ProfilePage, props: { meta, profile, contact, history } })
 list.push({ is: SkillsPage, props: { skills } })
 if (story) list.push({ is: StoryPage, props: { story, works: worksFor(story.works) } })
@@ -48,9 +50,10 @@ for (const raw of projects) {
   list.push({ is: ProjectOverview, props: { project: p, num, hero: heroFor(p) } })
   if (p.ux?.length) list.push({ is: ProjectUx, props: { project: p, num, items: uxFor(p) } })
   if (p.architecture?.nodes?.length) list.push({ is: ProjectArch, props: { project: p, num } })
-  indexed.push({ ...p, pageStart: start, pageEnd: list.length })
+  indexed.push({ ...p, pageStart: start, pageEnd: list.length, heroSrc: fileFor(p.hero?.web) })
 }
 indexEntry.props.projects = indexed
+coverEntry.props.projects = indexed
 list.push({ is: ContactPage, props: { meta, contact, num: `(${pad(section++)})` } })
 
 const pages = list.map((p, i) => ({ ...p, props: { ...p.props, page: i + 1, total: list.length } }))
